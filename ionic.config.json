@@ -1,0 +1,8 @@
+{
+  "name": "TilyAp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "4c013149"
+}

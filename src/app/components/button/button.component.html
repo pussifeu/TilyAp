@@ -1,0 +1,36 @@
+<div class="div-element">
+    <p></p>
+    <div class="input-element">
+        <input type="text" style="background-color: white" [ngModel]="value" disabled/>
+    </div>
+    <p></p>
+    <div class="button-element">
+        <div>
+            <div class="button-element-inside one" (click)="selectNumber(1)">1</div>
+            <div class="button-element-inside two" (click)="selectNumber(2)">2</div>
+            <div class="button-element-inside three" (click)="selectNumber(3)">3</div>
+        </div>
+        <div>
+            <div class="button-element-inside four" (click)="selectNumber(4)">4</div>
+            <div class="button-element-inside five" (click)="selectNumber(5)">5</div>
+            <div class="button-element-inside six" (click)="selectNumber(6)">6</div>
+        </div>
+        <div>
+            <div class="button-element-inside seven" (click)="selectNumber(7)">7</div>
+            <div class="button-element-inside eight" (click)="selectNumber(8)">8</div>
+            <div class="button-element-inside nine" (click)="selectNumber(9)">9</div>
+        </div>
+        <div>
+            <div class="button-element-inside clr" (click)="selectAction('clear')">CLR</div>
+            <div class="button-element-inside zero" (click)="selectNumber(0)">0</div>
+            <div class="button-element-inside canc" (click)="selectAction('cancel')">
+                <ion-icon name="backspace"></ion-icon>
+            </div>
+        </div>
+        <div>
+            <div class="button-validate" (click)="selectAction('validate')">
+                <ion-icon name="return-left"></ion-icon>
+            </div>
+        </div>
+    </div>
+</div>

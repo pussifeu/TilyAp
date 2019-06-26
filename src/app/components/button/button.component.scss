@@ -1,0 +1,80 @@
+$border-color: #e8e8e8;
+$color-active: #efefee;
+$color: black;
+$size: 18px;
+.div-element {
+  margin: 30px;
+  .input-element {
+    input {
+      height: 50px;
+      width: 100%;
+      text-align: center;
+      color: $color;
+      padding-left: 7px;
+      border: 1px ridge white;
+      font-size: 20px;
+      background-color: $border-color;
+    }
+  }
+  .button-element {
+    div {
+      display: flex;
+      width: 100%;
+      margin: 0 !important;
+      .button-element-inside {
+        cursor: pointer;
+        width: 100%;
+        background-color: white;
+        color: $color;
+        height: 50px;
+        padding: 15px 0 0 0;
+        justify-content: center;
+        font-size: $size;
+        &:active {
+          background-color: $color-active;
+        }
+      }
+
+      .button-validate {
+        width: 100%;
+        cursor: pointer;
+        background-color: white;
+        color: $color;
+        border: 0.5px solid $border-color;
+        height: 50px;
+        padding: 15px 15px 0 0;
+        justify-content: flex-end;
+        font-size: $size;
+        border-radius: 1px;
+        &:active {
+          background-color: $color-active;
+        }
+      }
+
+      .button-element-inside.one,
+      .button-element-inside.four,
+      .button-element-inside.seven,
+      .button-element-inside.clr {
+        border-top: 0.5px solid $border-color;
+        border-right: 0.5px solid $border-color;
+        border-left: 0.5px solid $border-color;
+        border-radius: 1px;
+      }
+
+      .button-element-inside.two,
+      .button-element-inside.three,
+      .button-element-inside.five,
+      .button-element-inside.six,
+      .button-element-inside.eight,
+      .button-element-inside.nine,
+      .button-element-inside.zero,
+      .button-element-inside.canc {
+        border-top: 0.5px solid $border-color;
+
+        border-right: 0.5px solid $border-color;
+        border-radius: 1px;
+      }
+
+    }
+  }
+}
