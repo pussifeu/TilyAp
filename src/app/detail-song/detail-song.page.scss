@@ -1,5 +1,10 @@
+$toast-md-background: #fff;
 .proposed {
   h5 {
     font-size: 15px;
   }
+}
+
+.toast-class {
+  background-color: $toast-md-background;
 }

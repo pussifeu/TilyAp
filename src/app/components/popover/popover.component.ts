@@ -16,6 +16,11 @@ export class PopoverComponent implements OnInit {
     ngOnInit() {
     }
 
+    openFavoritesPage() {
+        this.router.navigate(['favorites']);
+        this.dismissClick();
+    }
+
     openAproposPage() {
         this.router.navigate(['apropos']);
         this.dismissClick();

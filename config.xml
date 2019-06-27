@@ -89,5 +89,10 @@
     <plugin name="cordova-plugin-email-composer" spec="0.9.2">
         <variable name="ANDROID_SUPPORT_V4_VERSION" value="27.+" />
     </plugin>
+    <plugin name="cordova-plugin-x-socialsharing" spec="5.4.7">
+        <variable name="ANDROID_SUPPORT_V4_VERSION" value="24.1.1+" />
+    </plugin>
+    <plugin name="cordova-plugin-file" spec="^6.0.1" />
+    <plugin name="com.darktalker.cordova.screenshot" spec="^0.1.6" />
     <engine name="android" spec="7.1.4" />
 </widget>

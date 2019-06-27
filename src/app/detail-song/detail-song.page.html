@@ -4,54 +4,70 @@
             <ion-icon (click)="loadPageSong()" name="arrow-back"></ion-icon>
         </ion-title>
 
-        <ion-title *ngIf="oSong" slot="start" color="tertiary">Fihirana - {{oSong?.song_number}}</ion-title>
-        <ion-buttons slot="primary">
+        <ion-title *ngIf="oSong" slot="primary" color="tertiary">Hira - {{oSong?.song_number}}</ion-title>
+        <ion-buttons slot="end">
+            <ion-button color="tertiary"
+                        (click)="addSongOnFav()"
+                        *ngIf="!bIsExistFav">
+                <ion-icon name="star-outline" style="zoom:1.3;"></ion-icon>
+            </ion-button>
+            <ion-button color="tertiary"
+                        (click)="deleteSongOnFav()"
+                        *ngIf="bIsExistFav">
+                <ion-icon name="star" style="zoom:1.3;"></ion-icon>
+            </ion-button>
+            <ion-button color="tertiary" (click)="shareFacebook()">
+                <ion-icon name="logo-facebook" style="zoom:1.3;"></ion-icon>
+            </ion-button>
             <ion-button color="tertiary" (click)="presentPopover($event)">
-                <ion-icon slot="icon-only" name="information-circle" style="zoom:1.3;"></ion-icon>
+                <ion-icon name="md-list" style="zoom:1.3;"></ion-icon>
             </ion-button>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
 <ion-content color="tertiary" *ngIf="oSong">
-    <ion-card color="light">
-        <div style="margin: 0 15px 0 15px; padding: 1px;">
-            <h4>
-                <ion-text color="tertiary">{{oSong?.song_number}} - {{oSong?.song_tittle}}</ion-text>
-            </h4>
-        </div>
-        <div *ngFor="let oContent of oSong?.song_contents" style="margin: 0 15px 15px 15px; padding: 1px;">
-            <ion-text>
-                <i>
-                    <h5 *ngIf="oContent.song_part_number == 'Fiverenany'" text-justify=""
-                        [innerHTML]="'<u>Ref:</u> '+nl2br(oContent.song_part_text)"
-                        style="font-weight: normal!important;">
-                    </h5>
 
-                    <h5 *ngIf="oContent.song_part_number != 'Fiverenany'"
-                        text-justify="" [innerHTML]="oContent.song_part_number+'- '+nl2br(oContent.song_part_text)"
-                        style="font-weight: normal!important;">
-                    </h5>
-                </i>
+    <div id="ion-content-dom">
+        <ion-card color="light">
+            <div style="margin: 0 15px 0 15px; padding: 1px;">
+                <h4>
+                    <ion-text color="tertiary">{{oSong?.song_number}} - {{oSong?.song_tittle}}</ion-text>
+                </h4>
+            </div>
+            <div *ngFor="let oContent of oSong?.song_contents" style="margin: 0 15px 15px 15px; padding: 1px;">
+                <ion-text>
+                    <i>
+                        <h5 *ngIf="oContent.song_part_number == 'Fiverenany'" text-justify=""
+                            [innerHTML]="'<u>Ref:</u> '+nl2br(oContent.song_part_text)"
+                            style="font-weight: normal!important;">
+                        </h5>
 
-            </ion-text>
-        </div>
-        <div align="right" style="margin-right: 15px">
-            <ion-grid slot="end">
-                <ion-text color="tertiary" *ngIf="oSong?.song_author != ''">
-                    Mpanoratra: <i>{{oSong?.song_author}}</i>
+                        <h5 *ngIf="oContent.song_part_number != 'Fiverenany'"
+                            text-justify="" [innerHTML]="oContent.song_part_number+'- '+nl2br(oContent.song_part_text)"
+                            style="font-weight: normal!important;">
+                        </h5>
+                    </i>
+
                 </ion-text>
-                <br/>
-                <ion-text color="tertiary" *ngIf="oSong?.song_compositor != ''">
-                    Feony: <i>{{oSong?.song_compositor}}</i>
-                </ion-text>
-                <br/>
-                <ion-text color="tertiary" *ngIf="oSong?.song_description != ''">
-                    <i>{{oSong?.song_description}}</i>
-                </ion-text>
-                <br>
-            </ion-grid>
-        </div>
-    </ion-card>
+            </div>
+            <div align="right" style="margin-right: 15px">
+                <ion-grid slot="end">
+                    <ion-text color="tertiary" *ngIf="oSong?.song_author != ''">
+                        Mpanoratra: <i>{{oSong?.song_author}}</i>
+                    </ion-text>
+                    <br/>
+                    <ion-text color="tertiary" *ngIf="oSong?.song_compositor != ''">
+                        Feony: <i>{{oSong?.song_compositor}}</i>
+                    </ion-text>
+                    <br/>
+                    <ion-text color="tertiary" *ngIf="oSong?.song_description != ''">
+                        <i>{{oSong?.song_description}}</i>
+                    </ion-text>
+                    <br>
+                </ion-grid>
+            </div>
+        </ion-card>
+    </div>
 </ion-content>
 <ion-content color="tertiary" *ngIf="!oSong">
     <ion-list style="margin: 10px">
@@ -60,3 +76,22 @@
         </div>
     </ion-list>
 </ion-content>
+
+<ion-footer>
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="song" (click)="getPage('song')" >
+            <ion-icon name="musical-notes" color="tertiary"></ion-icon>
+            <ion-label color="tertiary">Hira sy sareba</ion-label>
+        </ion-tab-button>
+
+        <!--<ion-tab-button tab="game" (click)="getPage('game')">
+          <ion-icon name="logo-xbox" color="tertiary"></ion-icon>
+          <ion-label color="tertiary">Lalao sy teknika</ion-label>
+        </ion-tab-button>-->
+
+        <ion-tab-button tab="search" (click)="getPage('search')">
+            <ion-icon name="search" color="tertiary"></ion-icon>
+            <ion-label color="tertiary">Mitady hira</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+</ion-footer>

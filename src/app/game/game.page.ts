@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import {PopoverComponent} from '../components/popover/popover.component';
+import {PopoverController} from '@ionic/angular';
 // import {EmailComposer} from '@ionic-native/email-composer';
 
 
@@ -9,10 +11,19 @@ import {Component} from '@angular/core';
 })
 export class GamePage {
 
-    constructor() {
+    constructor(
+        public popoverCtrl: PopoverController,) {
         // this.sendMail();
     }
 
+    async presentPopover(even: any) {
+        const popover = await this.popoverCtrl.create({
+            component: PopoverComponent,
+            event: even,
+            translucent: true
+        });
+        return await popover.present();
+    }
     /* sendMail() {
         this.emailComposer.isAvailable().then((available: boolean) => {
             if (available) {
