@@ -26,7 +26,6 @@
     </ion-toolbar>
 </ion-header>
 <ion-content color="tertiary" *ngIf="oSong">
-
     <div id="ion-content-dom">
         <ion-card color="light">
             <div style="margin: 0 15px 0 15px; padding: 1px;">
@@ -68,6 +67,9 @@
             </div>
         </ion-card>
     </div>
+    <ion-card *ngIf="oSong.song_link_youtube != ''">
+        <iframe width="100%" height="315" [src]="sTrustedVideoUrl" frameborder="0" allowfullscreen></iframe>
+    </ion-card>
 </ion-content>
 <ion-content color="tertiary" *ngIf="!oSong">
     <ion-list style="margin: 10px">

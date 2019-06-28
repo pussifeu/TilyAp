@@ -3,6 +3,7 @@ import {NavController, PopoverController, ToastController} from '@ionic/angular'
 import {ActivatedRoute, Router} from '@angular/router';
 import {PopoverComponent} from '../components/popover/popover.component';
 import {SocialSharing} from '@ionic-native/social-sharing/ngx';
+import {DomSanitizer} from '@angular/platform-browser';
 import domtoimage from 'dom-to-image';
 
 
@@ -19,14 +20,18 @@ export class DetailSongPage implements OnInit {
     aResult: any;
     songsFavStorage: any;
     bIsExistFav: boolean;
+    sTrustedVideoUrl: any;
 
     constructor(private route: ActivatedRoute,
                 private router: Router,
                 private navCtrl: NavController,
                 public popoverController: PopoverController,
                 private socialSharing: SocialSharing,
-                public toastController: ToastController) {
+                public toastController: ToastController,
+                private domSanitizer: DomSanitizer) {
         this.getSong();
+        const sLink = this.oSong.song_link_youtube;
+        this.sTrustedVideoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(sLink);
         const aStorage = JSON.parse(localStorage.getItem('songsFavStorage'));
         this.sValue = this.route.snapshot.queryParams.id;
         if (aStorage == null) {

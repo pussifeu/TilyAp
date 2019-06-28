@@ -5,6 +5,8 @@
         "song_author": "Chef Randria",
         "song_compositor": "RADO (George ANDRIAMANANTENA)",
         "song_description": "",
+        "song_link_youtube": "https:\/\/www.youtube.com\/embed\/W_p1oeDN8Ro",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "1",
@@ -31,6 +33,8 @@
         "song_author": "S RANDRIA",
         "song_compositor": "Haendel",
         "song_description": "",
+        "song_link_youtube": "https:\/\/www.youtube.com\/embed\/z0MQGXJm9vs",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "3",
@@ -65,6 +69,8 @@
         "song_author": "Vintsy Mikalo",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "7",
@@ -107,6 +113,8 @@
         "song_author": "Do Fetsy",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "11",
@@ -149,6 +157,8 @@
         "song_author": "Chef Samuel RANDRIA\/Dawilly",
         "song_compositor": "Haendel",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "15",
@@ -191,6 +201,8 @@
         "song_author": "Ara Mientana",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "18",
@@ -249,6 +261,8 @@
         "song_author": "S. RANDRIA",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "24",
@@ -283,6 +297,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "28",
@@ -317,6 +333,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "30",
@@ -359,6 +377,8 @@
         "song_author": "J. Nalisoa RAVALITERA",
         "song_compositor": "L. Solofo R",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "35",
@@ -393,6 +413,8 @@
         "song_author": "Do Fetsy (Razanajaona S.)",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "37",
@@ -427,18 +449,12 @@
         "song_author": "RAMINO Paul",
         "song_compositor": "RAMINO Paul",
         "song_description": "",
+        "song_link_youtube": "https:\/\/www.youtube.com\/embed\/FszWB1bcKxc",
+        "song_link_mp3": "",
         "song_contents": [
             {
-                "song_part_id": "41",
-                "song_part_text": "Ka vonona aho ny hanasoa anao\r\nRy tany tiako mamiko\r\nFa Tily aho ka matokia ianao\r\nNy aiko re no fetrako\r\n",
-                "song_id": "12",
-                "type_song_part_id": "1",
-                "type_song_part_lib": "Fiverenany",
-                "song_part_number": "Fiverenany"
-            },
-            {
                 "song_part_id": "40",
-                "song_part_text": "Efa reko hatry ny ela be\r\nNy antsonao ry taniko\r\nAry tsapako tokoa izao\r\n\u2018Zany hetahetanao\r\nKa vonona aho ny hanasoa anao\r\nRy tany tiako mamiko\r\nFa Tily aho ka matokia ianao\r\nNy aiko re no fetrako\r\n",
+                "song_part_text": "Efa reko hatry ny ela be\r\nNy antsonao ry taniko\r\nAry tsapako tokoa izao\r\n\u2018Zany hetahetanao\r\n\r\nKa vonona aho ny hanasoa anao\r\nRy tany tiako mamiko\r\nFa Tily aho ka matokia ianao\r\nNy aiko re no fetrako\r\n",
                 "song_id": "12",
                 "type_song_part_id": "2",
                 "type_song_part_lib": "Andininy",
@@ -446,19 +462,11 @@
             },
             {
                 "song_part_id": "42",
-                "song_part_text": "Ianao ry Fiangonako\r\nMila olom-baovao\r\nFeno hery vonton\u2019ny fanahy\r\nKa mijoro ho tena sahy\r\n",
+                "song_part_text": "Ianao ry Fiangonako\r\nMila olom-baovao\r\nFeno hery vonton\u2019ny fanahy\r\nKa mijoro ho tena sahy\r\n\r\nRaha asa fitoriana no atao\r\nDia efa vonona aho izao\r\nFa Tily aho ka matokia ianao\r\nNy aiko re no fetrako\r\n",
                 "song_id": "12",
                 "type_song_part_id": "2",
                 "type_song_part_lib": "Andininy",
                 "song_part_number": 2
-            },
-            {
-                "song_part_id": "43",
-                "song_part_text": "Raha asa fitoriana no atao\r\nDia efa vonona aho izao\r\nFa Tily aho ka matokia ianao\r\nNy aiko re no fetrako\r\n",
-                "song_id": "12",
-                "type_song_part_id": "2",
-                "type_song_part_lib": "Andininy",
-                "song_part_number": 3
             }
         ],
         "song_number": 12
@@ -469,6 +477,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "44",
@@ -495,6 +505,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "https:\/\/www.youtube.com\/embed\/Wz3g1ZVIv3M",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "47",
@@ -529,6 +541,8 @@
         "song_author": "Chef Randria",
         "song_compositor": "Chef Randria",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "49",
@@ -563,6 +577,8 @@
         "song_author": "RAVALOSON Parfait",
         "song_compositor": "ANDRIAMASY Samuel \/  RASATA Durjean (Toliary)",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "53",
@@ -605,6 +621,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "56",
@@ -623,6 +641,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "57",
@@ -641,6 +661,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "58",
@@ -675,6 +697,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "61",
@@ -709,6 +733,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "64",
@@ -759,6 +785,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "69",
@@ -777,6 +805,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "70",
@@ -803,6 +833,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "73",
@@ -829,6 +861,8 @@
         "song_author": "TETSO miantsa",
         "song_compositor": "TETSO miantsa",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "74",
@@ -847,6 +881,8 @@
         "song_author": "RABEMANANJARA Marcel",
         "song_compositor": "RABEMANANJARA Marcel",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "76",
@@ -881,6 +917,8 @@
         "song_author": "ROIMEMY Fanilo (RASOANIAINA Livarijaona)",
         "song_compositor": "ROIMEMY Fanilo (RASOANIAINA Livarijaona)",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "79",
@@ -915,6 +953,8 @@
         "song_author": "RAMIRIANA",
         "song_compositor": "RAMIRIANA",
         "song_description": "",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "81",
@@ -933,6 +973,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "Hira fanaon\u2019ny Mpanazava rehefa manokatra hetsika",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "82",
@@ -967,6 +1009,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " Hira famaranana hetsika ho an\u2019ny Mpanazava",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "85",
@@ -993,6 +1037,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "87",
@@ -1011,6 +1057,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "88",
@@ -1053,6 +1101,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "93",
@@ -1119,6 +1169,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "100",
@@ -1153,6 +1205,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "103",
@@ -1195,6 +1249,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "106",
@@ -1213,6 +1269,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "107",
@@ -1239,6 +1297,8 @@
         "song_author": "Chef RANDRIA",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "110",
@@ -1281,6 +1341,8 @@
         "song_author": "Nalisoa RAVALITERA",
         "song_compositor": "Jean B ANDRIAMAHATONY",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "113",
@@ -1307,6 +1369,8 @@
         "song_author": "Jean B ANDRIAMAHATONY",
         "song_compositor": "Jean B ANDRIAMAHATONY",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "115",
@@ -1333,6 +1397,8 @@
         "song_author": "Doudou\/ Veve",
         "song_compositor": "Doudou ",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "118",
@@ -1367,6 +1433,8 @@
         "song_author": "Nalisoa RAVALITERA",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "120",
@@ -1385,6 +1453,8 @@
         "song_author": "Filoha RABEARISON",
         "song_compositor": "Filoha RABEARISON",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "121",
@@ -1419,6 +1489,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "Hira tarazo hitovian\u2019ny skoto eran-tany rehefa mamarana lasy na hetsika goavana. Misy tonony amin\u2019ny fiteny marobe ity hira ity, amin\u2019ny teny frantsay dia \"Chorale des Adieux\" no hahalalana azy.",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "125",
@@ -1461,6 +1533,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "128",
@@ -1511,6 +1585,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "132",
@@ -1537,6 +1613,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "136",
@@ -1571,6 +1649,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "137",
@@ -1589,6 +1669,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "139",
@@ -1615,6 +1697,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "141",
@@ -1649,6 +1733,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "Hira Fanekena Tily ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "145",
@@ -1699,6 +1785,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "150",
@@ -1749,6 +1837,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "155",
@@ -1799,6 +1889,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "159",
@@ -1825,6 +1917,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "162",
@@ -1867,6 +1961,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "165",
@@ -1909,6 +2005,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "169",
@@ -1943,6 +2041,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "172",
@@ -1985,6 +2085,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "176",
@@ -2027,6 +2129,8 @@
         "song_author": "Ara Mientana",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "180",
@@ -2085,6 +2189,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "186",
@@ -2103,6 +2209,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "187",
@@ -2121,6 +2229,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "190",
@@ -2155,6 +2265,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "191",
@@ -2189,6 +2301,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "FANEVA 80\u00c8",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "194",
@@ -2231,6 +2345,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "198",
@@ -2257,6 +2373,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "200",
@@ -2299,6 +2417,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "204",
@@ -2317,6 +2437,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "206",
@@ -2359,6 +2481,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "209",
@@ -2401,6 +2525,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "213",
@@ -2419,6 +2545,8 @@
         "song_author": "Do Fetsy",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "214",
@@ -2461,6 +2589,8 @@
         "song_author": "Ara mientana",
         "song_compositor": "Ara mientana",
         "song_description": "Lasy FNM FTR Faritany Antananarivo\r\nAndanona Manjakandriana\r\nAvril 1993\r\n",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "219",
@@ -2503,6 +2633,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "222",
@@ -2521,6 +2653,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "224",
@@ -2595,6 +2729,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "231",
@@ -2613,6 +2749,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "232",
@@ -2631,6 +2769,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "233",
@@ -2649,6 +2789,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "234",
@@ -2667,6 +2809,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": " ",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "235",
@@ -2685,6 +2829,8 @@
         "song_author": "",
         "song_compositor": "",
         "song_description": "Hira fiantsona sampana maitso",
+        "song_link_youtube": "",
+        "song_link_mp3": "",
         "song_contents": [
             {
                 "song_part_id": "237",
