@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Tononkira Skoto</name>
+<widget id="io.ionic.app" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Tononkira Skoto (TILY)</name>
     <description>Tononkira skoto sy sareba</description>
-    <author email="hi@ionicframework.com" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <author email="herinjaka.rakotoarivony@gmail.com" >TEM Team</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -92,6 +92,10 @@
     </plugin>
     <plugin name="cordova-plugin-x-socialsharing" spec="5.4.7">
         <variable name="ANDROID_SUPPORT_V4_VERSION" value="24.1.1+" />
+    </plugin>
+    <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
+    <plugin name="cordova-plugin-advanced-http" spec="^2.1.1">
+        <variable name="OKHTTP_VERSION" value="3.10.0" />
     </plugin>
     <engine name="android" spec="7.1.4" />
 </widget>

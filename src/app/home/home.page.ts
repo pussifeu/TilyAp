@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {ServicesSongsService} from '../services/services-songs.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -8,9 +7,7 @@ import {Router} from '@angular/router';
     styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-    constructor(public servicesSong: ServicesSongsService,
-                public router: Router) {
-        this.getAllSongs();
+    constructor(public router: Router) {
     }
 
     ngOnInit() {
@@ -23,11 +20,5 @@ export class HomePage implements OnInit {
         setTimeout(() => {
             this.router.navigate(['tabs-home/tabs/song']);
         }, 3500);
-    }
-
-    getAllSongs() {
-        this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
-            localStorage.setItem('songsDataStorage', JSON.stringify(res));
-        });
     }
 }

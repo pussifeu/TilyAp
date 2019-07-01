@@ -54,8 +54,8 @@ export class SongPage {
 
     searchValueInSong(event: any) {
         this.aFilterSongs = this.aSongs.filter((song) => {
-            return song.song_tittle.toLowerCase().indexOf(event.target.value.toLowerCase()) > -1;
+            return (song.song_tittle.toLowerCase().indexOf(event.target.value.toLowerCase()) > -1) ||
+                (song.s_song_contents.toLowerCase().indexOf(event.target.value.toLowerCase()) > -1) ;
         });
     }
-
 }

@@ -1,44 +1,55 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title slot="start" color="tertiary">
-            Mombamomba
-        </ion-title>
+        <ion-buttons slot="start" style="zoom:1.4;">
+            <ion-icon color="tertiary"  (click)="loadPageSong()" name="arrow-back"></ion-icon>
+        </ion-buttons>
+        <ion-title color="tertiary">A propos/Mombamomba</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content color="tertiary">
     <ion-list style="margin: 10px">
-        <ion-item class="proposed">
+        <ion-item>
             <div>
-                <h4 style="margin-bottom: 30px; font-size: 20px">
-                    <ion-text color="tertiary"><i>Tononkira skoto laharana faha 1.0.0</i></ion-text>
+                <h4 style="margin-bottom: 30px; font-size: 20px;text-align: center">
+                    <ion-text color="tertiary" text-center=""><i>Tononkira SKOTO (TILY)</i></ion-text>
                 </h4>
                 <h5 text-justify="">
                     <ion-text>
-                        Ity "application" ity dia mirakitra ireo tononkira skoto Malagasy izay voatahiry
-                        an-tsoratra.
+                        L'application <b style="color: #4c8dff">Tononkira SKOTO (TILY) </b>
+                        est une application conçue et développée par
+                        <b style="color: #4c8dff">Herinjaka R.</b> Responsable TILY Lille (France),
+                        en collaboration avec l'équipe de <b style="color: #4c8dff">Tily Eto Madagasikara (TEM) </b> et l'équipe de  <b style="color: #4c8dff"> Tily France.</b>
+                        <br><br>
+                        Elle contient les paroles de chansons SKOTO.
+                        <br><br>
+                        Elle a pour but de réunir et de partager les paroles des chansons SKOTO.
+                    </ion-text>
+                </h5>
+                <h5 text-justify="">
+                    <ion-text text-justify>
+                        Si vous avez des suggestions, des améliorations ou souhaitez ajouter de nouvelles paroles dans l'application,
+                        N’hésitez pas à nous contacter via l'adresse mail ci-dessous:
+                    </ion-text>
+                </h5>
+
+            </div>
+        </ion-item>
+        <ion-item class="proposed">
+            <div>
+                <h5 text-justify="">
+                    <ion-text>
+                        Ny "application" <b style="color: #4c8dff">Tononkira SKOTO (TILY)</b> dia asa novokarin'i
+                        <b style="color: #4c8dff">Herinjaka R.</b> Mpiandraikitra Sampana Maitso TILY Lille (France),
+                        izay miara miasa amin'ireo ekipan'ny <b style="color: #4c8dff">Tily Eto Madagasikara (TEM) </b> sy ny ekipan'ny<b style="color: #4c8dff"> Tily France.</b>
+                        <br><br>
+                        Natao izy mba afahana manangona, mitahiry ary mizara ireo tononkira SKOTO izay voatahiry an-tsoratra.
                     </ion-text>
                 </h5>
                 <h5 text-justify="">
                     <ion-text>
                         Raha misy ny fanitsiana, fanatsarana na ihany koa misy te hanampy tononkira vaovao dia aza
                         misalasala manoratra aminay amin'ny alalan'ny mailaka voalaza etsy ambany.
-                    </ion-text>
-                </h5>
-            </div>
-        </ion-item>
-        <ion-item>
-            <div>
-                <h5 text-justify="">
-                    <ion-text>
-                        Cette application contient les paroles de chansons scouts Malagasy.
-                    </ion-text>
-                </h5>
-                <h5 text-justify="">
-                    <ion-text>
-                        Si vous avez des suggestions, des améliorations ou vous voulez ajouter une nouvelle parole
-                        dans l'application,
-                        N'hesitez pas à nous contacter via l'adresse mail ci-dessous.
                     </ion-text>
                 </h5>
                 <h5 text-justify="">
