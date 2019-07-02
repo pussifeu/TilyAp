@@ -4,7 +4,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {PopoverComponent} from '../components/popover/popover.component';
 import {SocialSharing} from '@ionic-native/social-sharing/ngx';
 import {DomSanitizer} from '@angular/platform-browser';
-import {Network} from '@ionic-native/network/ngx';
 import domtoimage from 'dom-to-image';
 
 
@@ -29,8 +28,7 @@ export class DetailSongPage implements OnInit {
                 public popoverController: PopoverController,
                 private socialSharing: SocialSharing,
                 public toastController: ToastController,
-                private domSanitizer: DomSanitizer,
-                private network: Network) {
+                private domSanitizer: DomSanitizer) {
         this.getSong();
         const sLink = this.oSong.song_link_youtube;
         if (!navigator.onLine) {

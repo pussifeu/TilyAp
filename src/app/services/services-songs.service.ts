@@ -1,14 +1,12 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {HTTP} from '@ionic-native/http/ngx';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ServicesSongsService {
 
-    constructor(private httpClient: HttpClient,
-                private http: HTTP) {
+    constructor(private httpClient: HttpClient) {
     }
 
     aGetRemoteJsonData() {
@@ -16,6 +14,6 @@ export class ServicesSongsService {
     }
 
     aGetRemoteOnlineJsonData() {
-        return this.http.get('http://admin-tily.com:8080/api/json-data', {}, {});
+        // return this.http.get('http://admin-tily.com:8080/api/json-data', {}, {});
     }
 }
