@@ -2,7 +2,7 @@
 <widget id="io.ionic.app" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Tononkira Skoto (TILY)</name>
     <description>Tononkira skoto sy sareba</description>
-    <author email="herinjaka.rakotoarivony@gmail.com" >TEM Team</author>
+    <author email="herinjaka.rakotoarivony@gmail.com">TEM Team</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
