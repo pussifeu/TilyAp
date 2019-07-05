@@ -8,6 +8,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {SocialSharing} from '@ionic-native/social-sharing/ngx';
+import {Network} from '@ionic-native/network/ngx';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 @NgModule({
     declarations: [AppComponent],
@@ -17,7 +19,9 @@ import {SocialSharing} from '@ionic-native/social-sharing/ngx';
         StatusBar,
         SplashScreen,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
-        SocialSharing
+        SocialSharing,
+        Network,
+        {provide: LocationStrategy, useClass: HashLocationStrategy}
     ],
     bootstrap: [AppComponent]
 })

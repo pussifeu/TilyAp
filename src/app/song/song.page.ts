@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 import {PopoverComponent} from '../components/popover/popover.component';
 import {PopoverController} from '@ionic/angular';
+import {ServicesSongsService} from '../services/services-songs.service';
 
 
 @Component({
@@ -15,12 +16,14 @@ export class SongPage {
     aFilterSongs = [];
 
     constructor(public router: Router,
+                public servicesSong: ServicesSongsService,
                 public popoverCtrl: PopoverController) {
         this.value = '';
         this.getAllSongs();
     }
 
     ionViewDidEnter() {
+        this.getAllSongs();
         this.aFilterSongs = this.aSongs;
     }
 
@@ -44,7 +47,12 @@ export class SongPage {
     }
 
     getAllSongs() {
-        this.aSongs = JSON.parse(localStorage.getItem('songsDataStorage'));
+        const songsDataStorageInline = localStorage.getItem('songsDataStorageInline');
+        if (songsDataStorageInline !== null && songsDataStorageInline !== '') {
+            this.aSongs = JSON.parse(localStorage.getItem('songsDataStorageInline'));
+        } else {
+            this.aSongs = JSON.parse(localStorage.getItem('songsDataStorage'));
+        }
     }
 
     getSongByTittle(event: any) {
@@ -55,7 +63,7 @@ export class SongPage {
     searchValueInSong(event: any) {
         this.aFilterSongs = this.aSongs.filter((song) => {
             return (song.song_tittle.toLowerCase().indexOf(event.target.value.toLowerCase()) > -1) ||
-                (song.s_song_contents.toLowerCase().indexOf(event.target.value.toLowerCase()) > -1) ;
+                (song.s_song_contents.toLowerCase().indexOf(event.target.value.toLowerCase()) > -1);
         });
     }
 }

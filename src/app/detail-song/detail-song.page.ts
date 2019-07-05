@@ -2,9 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {NavController, PopoverController, ToastController} from '@ionic/angular';
 import {ActivatedRoute, Router} from '@angular/router';
 import {PopoverComponent} from '../components/popover/popover.component';
-import {SocialSharing} from '@ionic-native/social-sharing/ngx';
 import {DomSanitizer} from '@angular/platform-browser';
-import domtoimage from 'dom-to-image';
+import {PopoverShareComponent} from '../components/popover-share/popover-share.component';
+import {Platform} from '@ionic/angular';
 
 
 @Component({
@@ -18,25 +18,26 @@ export class DetailSongPage implements OnInit {
     oSong: any;
     sPageFather: any;
     aResult: any;
-    songsFavStorage: any;
+    aSongsFavStorage: any;
     bIsExistFav: boolean;
     sTrustedVideoUrl: any;
+    bWebPlatForm: boolean;
 
     constructor(private route: ActivatedRoute,
                 private router: Router,
                 private navCtrl: NavController,
                 public popoverController: PopoverController,
-                private socialSharing: SocialSharing,
                 public toastController: ToastController,
+                private platform: Platform,
                 private domSanitizer: DomSanitizer) {
         this.getSong();
         const sLink = this.oSong.song_link_youtube;
+        const aStorage = JSON.parse(localStorage.getItem('songsFavStorage'));
         if (!navigator.onLine) {
             this.sTrustedVideoUrl = '';
         } else {
             this.sTrustedVideoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(sLink);
         }
-        const aStorage = JSON.parse(localStorage.getItem('songsFavStorage'));
         this.sValue = this.route.snapshot.queryParams.id;
         if (aStorage == null) {
             this.aResult = new Array();
@@ -45,6 +46,9 @@ export class DetailSongPage implements OnInit {
             this.aResult = aStorage;
             this.bIsExistFav = this.checkIsFavExist(this.sValue);
         }
+        // this.bWebPlatForm = document.URL.startsWith('http') || document.URL.startsWith('https');
+        this.bWebPlatForm = false;
+        console.log(this.bWebPlatForm);
     }
 
     ngOnInit() {
@@ -73,19 +77,13 @@ export class DetailSongPage implements OnInit {
         return await popover.present();
     }
 
-    async shareFacebook() {
-        const node = document.getElementById('ion-content-dom');
-        domtoimage.toPng(node)
-            .then((dataUrl) => {
-                this.socialSharing.shareViaFacebook(null, dataUrl, null).then(
-                    () => {
-                    }).catch((e) => {
-                    }
-                );
-            })
-            .catch((error) => {
-                console.error('oops, something went wrong!', error);
-            });
+    async presentPopoverShare(ev: any) {
+        const popover = await this.popoverController.create({
+            component: PopoverShareComponent,
+            event: ev,
+            translucent: true
+        });
+        return await popover.present();
     }
 
     getSong() {
@@ -95,9 +93,16 @@ export class DetailSongPage implements OnInit {
 
     getSongById(idSong: any) {
         const aSongs = JSON.parse(localStorage.getItem('songsDataStorage'));
-        return aSongs.filter((song) => {
-            return song.song_id === idSong;
-        }) [0];
+        const aSongsDataStorageInline = JSON.parse(localStorage.getItem('songsDataStorageInline'));
+        if (aSongsDataStorageInline !== null && aSongsDataStorageInline !== '') {
+            return aSongsDataStorageInline.filter((song) => {
+                return song.song_id === idSong;
+            }) [0];
+        } else {
+            return aSongs.filter((song) => {
+                return song.song_id === idSong;
+            }) [0];
+        }
     }
 
     addSongOnFav() {
@@ -105,9 +110,9 @@ export class DetailSongPage implements OnInit {
             const aNewFav = new Array();
             aNewFav.push({value: this.sValue});
             this.bIsExistFav = true;
-            this.songsFavStorage = aNewFav.concat(this.aResult);
-            this.aResult = this.songsFavStorage;
-            localStorage.setItem('songsFavStorage', JSON.stringify(this.songsFavStorage));
+            this.aSongsFavStorage = aNewFav.concat(this.aResult);
+            this.aResult = this.aSongsFavStorage;
+            localStorage.setItem('songsFavStorage', JSON.stringify(this.aSongsFavStorage));
             this.presentToast('bottom', 'Tafiditra ao anaty lisitra ireo hira tiana.');
         }
     }
@@ -115,8 +120,8 @@ export class DetailSongPage implements OnInit {
     deleteSongOnFav() {
         if (this.checkIsFavExist(this.sValue)) {
             const aNewStorage = this.removeFavInStorage(this.sValue);
-            this.songsFavStorage = aNewStorage;
-            localStorage.setItem('songsFavStorage', JSON.stringify(this.songsFavStorage));
+            this.aSongsFavStorage = aNewStorage;
+            localStorage.setItem('songsFavStorage', JSON.stringify(this.aSongsFavStorage));
             this.bIsExistFav = false;
             this.presentToast('bottom', 'Voafafa ao anaty lisitra ireo hira tiana.');
         }

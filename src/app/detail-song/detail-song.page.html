@@ -15,8 +15,8 @@
                         *ngIf="bIsExistFav">
                 <ion-icon name="star" style="zoom:1.3;"></ion-icon>
             </ion-button>
-            <ion-button color="tertiary" (click)="shareFacebook()">
-                <ion-icon name="logo-facebook" style="zoom:1.3;"></ion-icon>
+            <ion-button color="tertiary" *ngIf="!bWebPlatForm" (click)="presentPopoverShare($event)">
+                <ion-icon name="share" style="zoom:1.3;"></ion-icon>
             </ion-button>
             <ion-button color="tertiary" (click)="presentPopover($event)">
                 <ion-icon name="md-list" style="zoom:1.3;"></ion-icon>

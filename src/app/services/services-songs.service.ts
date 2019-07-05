@@ -14,6 +14,6 @@ export class ServicesSongsService {
     }
 
     aGetRemoteOnlineJsonData() {
-        // return this.http.get('http://admin-tily.com:8080/api/json-data', {}, {});
+        return this.httpClient.get('https://panel-admin.app-tliy.com/api/json-data');
     }
 }

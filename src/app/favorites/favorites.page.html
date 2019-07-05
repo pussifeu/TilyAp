@@ -1,6 +1,5 @@
 <ion-header>
     <ion-toolbar>
-
         <ion-buttons slot="start" style="zoom:1.4;">
             <ion-icon name="musical-notes" color="tertiary" ></ion-icon>
         </ion-buttons>
@@ -22,7 +21,7 @@
                 <ion-label color="tertiary">{{song.song_number}} - {{song.song_tittle}}</ion-label>
             </ion-item>
         </div>
-        <div *ngIf="aSongsStorage.length == 0" style="margin: 10px">
+        <div *ngIf="aSongsStorage == 0" style="margin: 10px">
             <ion-label color="tertiary">Tsy misy ny lisitra !!!!</ion-label>
         </div>
     </ion-list>

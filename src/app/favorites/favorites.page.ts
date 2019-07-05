@@ -26,6 +26,12 @@ export class FavoritesPage implements OnInit {
     ionViewDidEnter() {
         this.aSongs = JSON.parse(localStorage.getItem('songsDataStorage'));
         this.aStorage = JSON.parse(localStorage.getItem('songsFavStorage'));
+        if (this.aStorage == null) {
+            this.aStorage = new Array();
+        }
+        if (this.aSongs == null) {
+            this.aSongs = new Array();
+        }
         this.aSongsStorage = new Array();
         this.getSongsFavorites();
     }
