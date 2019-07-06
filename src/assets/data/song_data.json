@@ -10,7 +10,7 @@
         "song_contents": [
             {
                 "song_part_id": "1",
-                "song_part_text": "Indreto vonona izahay antoko Tily Malagasy\nNy Tily malagasy tomady\nHiezaka tokoa ho olom-banona\nHo voninahitry ny tanindrazanay Madagasikara",
+                "song_part_text": "Indreto vonona izahay antoko Tily Malagasy\r\nNy Tily malagasy tomady\r\nHiezaka tokoa ho olom-banona\r\nHo voninahitry ny tanindrazanay Madagasikara",
                 "song_id": "1",
                 "type_song_part_id": "2",
                 "type_song_part_lib": "Andininy",
@@ -18,14 +18,14 @@
             },
             {
                 "song_part_id": "2",
-                "song_part_text": "Ry Tompo \u00f4, ny taninay mba raisonao sy anjakao\nHo olonao anie ny Malagasy\nAmpandrosoy sy hatsarao ny nosinay\nRy Tompo \u00f4, tahio ny tanindrazanay Madagasikara",
+                "song_part_text": "Ry Tompo \u00f4, ny taninay mba raisonao sy anjakao\r\nHo olonao anie ny Malagasy\r\nAmpandrosoy sy hatsarao ny nosinay\r\nRy Tompo \u00f4, tahio ny tanindrazanay Madagasikara",
                 "song_id": "1",
                 "type_song_part_id": "2",
                 "type_song_part_lib": "Andininy",
                 "song_part_number": 2
             }
         ],
-        "s_song_contents": "Indreto vonona izahay antoko Tily Malagasy\nNy Tily malagasy tomady\nHiezaka tokoa ho olom-banona\nHo voninahitry ny tanindrazanay Madagasikara, Ry Tompo \u00f4, ny taninay mba raisonao sy anjakao\nHo olonao anie ny Malagasy\nAmpandrosoy sy hatsarao ny nosinay\nRy Tompo \u00f4, tahio ny tanindrazanay Madagasikara",
+        "s_song_contents": "Indreto vonona izahay antoko Tily Malagasy\r\nNy Tily malagasy tomady\r\nHiezaka tokoa ho olom-banona\r\nHo voninahitry ny tanindrazanay Madagasikara, Ry Tompo \u00f4, ny taninay mba raisonao sy anjakao\r\nHo olonao anie ny Malagasy\r\nAmpandrosoy sy hatsarao ny nosinay\r\nRy Tompo \u00f4, tahio ny tanindrazanay Madagasikara",
         "song_number": 1
     },
     {
@@ -39,7 +39,7 @@
         "song_contents": [
             {
                 "song_part_id": "3",
-                "song_part_text": "Ho tiavinay mandrakizay Madagasikara\r\nFa lova soa napetrak'ireo razanay\r\nVoasoratra mazava ao am-po ny anarany\r\nIrinay ho soa, hiadana tokoa\r\nFa nosy maminay Madagasikara\r\n",
+                "song_part_text": "Ho tiavinay mandrakizay M\/kara\r\nFa lova soa napetrak'ireo razanay\r\nVoasoratra mazava ao am-po ny anarany\r\nIrinay ho soa, hiadana tokoa\r\nFa nosy maminay Madagasikara\r\n",
                 "song_id": "2",
                 "type_song_part_id": "2",
                 "type_song_part_lib": "Andininy",
@@ -47,7 +47,7 @@
             },
             {
                 "song_part_id": "4",
-                "song_part_text": "'Zao malagasy 'rehetr 'izao ho tiavinay\r\nHo tiavinay fa iray tokoa izahay\r\nHiezaka tokoa izahay ho andrin\"izy ireo\r\nIrinay ho soa, hiadana tokoa\r\nFa nosy maminay Madagasikara\r\n",
+                "song_part_text": "Zao malagasy rehetr 'izao ho tiavinay\r\nHo tiavinay fa iray tokoa izahay\r\nHiezaka tokoa izahay ho andrin\"izy ireo\r\nIrinay ho soa, hiadana tokoa\r\nFa nosy maminay Madagasikara\r\n",
                 "song_id": "2",
                 "type_song_part_id": "2",
                 "type_song_part_lib": "Andininy",
@@ -62,7 +62,7 @@
                 "song_part_number": 3
             }
         ],
-        "s_song_contents": "Ho tiavinay mandrakizay Madagasikara\r\nFa lova soa napetrak'ireo razanay\r\nVoasoratra mazava ao am-po ny anarany\r\nIrinay ho soa, hiadana tokoa\r\nFa nosy maminay Madagasikara\r\n, 'Zao malagasy 'rehetr 'izao ho tiavinay\r\nHo tiavinay fa iray tokoa izahay\r\nHiezaka tokoa izahay ho andrin\"izy ireo\r\nIrinay ho soa, hiadana tokoa\r\nFa nosy maminay Madagasikara\r\n, Atolotray ny tenanay ho azy avokoa\r\nNy sainay entinay hiasa mafy hanasoa\r\nNy fanahinay hangataka\r\nHivavaka hanao hoe\r\nRy Tompo \u00f4 tahio Madagasikara\r\n",
+        "s_song_contents": "Ho tiavinay mandrakizay M\/kara\r\nFa lova soa napetrak'ireo razanay\r\nVoasoratra mazava ao am-po ny anarany\r\nIrinay ho soa, hiadana tokoa\r\nFa nosy maminay Madagasikara\r\n, Zao malagasy rehetr 'izao ho tiavinay\r\nHo tiavinay fa iray tokoa izahay\r\nHiezaka tokoa izahay ho andrin\"izy ireo\r\nIrinay ho soa, hiadana tokoa\r\nFa nosy maminay Madagasikara\r\n, Atolotray ny tenanay ho azy avokoa\r\nNy sainay entinay hiasa mafy hanasoa\r\nNy fanahinay hangataka\r\nHivavaka hanao hoe\r\nRy Tompo \u00f4 tahio Madagasikara\r\n",
         "song_number": 2
     },
     {
@@ -456,7 +456,7 @@
     },
     {
         "song_id": "12",
-        "song_tittle": "TILY AHO KA MATOKIA",
+        "song_tittle": "TILY AHO KA MATOKIA - EFA REKO",
         "song_author": "RAMINO Paul",
         "song_compositor": "RAMINO Paul",
         "song_description": "",

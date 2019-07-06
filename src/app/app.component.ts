@@ -10,6 +10,10 @@ import {Network} from '@ionic-native/network/ngx';
     templateUrl: 'app.component.html'
 })
 export class AppComponent {
+    aSongsDataStorage: any;
+    aSongsDataStorageInline: any;
+    aSongsFavStorage: any;
+
     constructor(
         private platform: Platform,
         private splashScreen: SplashScreen,
@@ -17,6 +21,9 @@ export class AppComponent {
         public servicesSong: ServicesSongsService,
         public network: Network
     ) {
+        this.aSongsDataStorageInline = localStorage.getItem('songsDataStorageInline');
+        this.aSongsDataStorage = localStorage.getItem('songsDataStorage');
+        this.aSongsFavStorage = localStorage.getItem('songsFavStorage');
         this.initializeApp();
     }
 
@@ -29,30 +36,39 @@ export class AppComponent {
     }
 
     getAllSongs() {
-        const aSongsDataStorageInline = localStorage.getItem('songsDataStorageInline');
         if (!navigator.onLine) {
-            this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
-                if (aSongsDataStorageInline !== null && aSongsDataStorageInline !== '') {
-                    localStorage.setItem('songsDataStorageInline', aSongsDataStorageInline);
-                } else {
+            if (this.aSongsDataStorage === null || this.aSongsDataStorage === '') {
+                this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
                     localStorage.setItem('songsDataStorage', JSON.stringify(res));
-                }
-            });
+                });
+            }
+            if (this.aSongsDataStorageInline === null || this.aSongsDataStorageInline === '') {
+                this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
+                    localStorage.setItem('songsDataStorageInline', JSON.stringify(res));
+                });
+            }
         } else {
             this.servicesSong.aGetRemoteOnlineJsonData().subscribe(
                 (res) => {
                     localStorage.setItem('songsDataStorageInline', JSON.stringify(res));
+                    localStorage.setItem('songsDataStorage', JSON.stringify(res));
                 },
                 (err) => {
-                    this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
-                        if (aSongsDataStorageInline !== null && aSongsDataStorageInline !== '') {
-                            localStorage.setItem('songsDataStorageInline', aSongsDataStorageInline);
-                        } else {
+                    if (this.aSongsDataStorage === null || this.aSongsDataStorage === '') {
+                        this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
                             localStorage.setItem('songsDataStorage', JSON.stringify(res));
-                        }
-                    });
-                });
+                        });
+                    }
+                    if (this.aSongsDataStorageInline === null || this.aSongsDataStorageInline === '') {
+                        this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
+                            localStorage.setItem('songsDataStorageInline', JSON.stringify(res));
+                        });
+                    }
+                }
+            );
         }
-        localStorage.setItem('songsFavStorage', JSON.stringify([]));
+        if (this.aSongsFavStorage === null || this.aSongsFavStorage === '') {
+            localStorage.setItem('songsFavStorage', JSON.stringify([]));
+        }
     }
 }

@@ -14,15 +14,15 @@ export class SongPage {
     value: any;
     aSongs: any;
     aFilterSongs = [];
-
+    aSongsDataStorageInline: any;
     constructor(public router: Router,
                 public servicesSong: ServicesSongsService,
                 public popoverCtrl: PopoverController) {
         this.value = '';
-        this.getAllSongs();
     }
 
     ionViewDidEnter() {
+        this.aSongsDataStorageInline = localStorage.getItem('songsDataStorageInline');
         this.getAllSongs();
         this.aFilterSongs = this.aSongs;
     }
@@ -47,8 +47,7 @@ export class SongPage {
     }
 
     getAllSongs() {
-        const songsDataStorageInline = localStorage.getItem('songsDataStorageInline');
-        if (songsDataStorageInline !== null && songsDataStorageInline !== '') {
+        if (this.aSongsDataStorageInline !== null && this.aSongsDataStorageInline !== '') {
             this.aSongs = JSON.parse(localStorage.getItem('songsDataStorageInline'));
         } else {
             this.aSongs = JSON.parse(localStorage.getItem('songsDataStorage'));

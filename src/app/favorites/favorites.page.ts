@@ -17,9 +17,9 @@ export class FavoritesPage implements OnInit {
     constructor(public router: Router,
                 public popoverCtrl: PopoverController,
                 private navCtrl: NavController) {
-        this.aSongs = new Array();
-        this.aStorage = new Array();
-        this.aSongsStorage = new Array();
+        this.aSongs = [];
+        this.aStorage = [];
+        this.aSongsStorage = [];
     }
 
 
@@ -27,12 +27,12 @@ export class FavoritesPage implements OnInit {
         this.aSongs = JSON.parse(localStorage.getItem('songsDataStorage'));
         this.aStorage = JSON.parse(localStorage.getItem('songsFavStorage'));
         if (this.aStorage == null) {
-            this.aStorage = new Array();
+            this.aStorage = [];
         }
         if (this.aSongs == null) {
-            this.aSongs = new Array();
+            this.aSongs = [];
         }
-        this.aSongsStorage = new Array();
+        this.aSongsStorage = [];
         this.getSongsFavorites();
     }
 

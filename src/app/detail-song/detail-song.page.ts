@@ -22,6 +22,8 @@ export class DetailSongPage implements OnInit {
     bIsExistFav: boolean;
     sTrustedVideoUrl: any;
     bWebPlatForm: boolean;
+    aSongs: any;
+    aSongsDataStorageInline: any;
 
     constructor(private route: ActivatedRoute,
                 private router: Router,
@@ -30,6 +32,14 @@ export class DetailSongPage implements OnInit {
                 public toastController: ToastController,
                 private platform: Platform,
                 private domSanitizer: DomSanitizer) {
+
+        this.aSongs = JSON.parse(localStorage.getItem('songsDataStorage'));
+        this.aSongsDataStorageInline = JSON.parse(localStorage.getItem('songsDataStorageInline'));
+
+        if (!(this.aSongs !== null && this.aSongs !== ''
+            && this.aSongsDataStorageInline !== null && this.aSongsDataStorageInline !== '')) {
+            this.router.navigate(['/']);
+        }
         this.getSong();
         const sLink = this.oSong.song_link_youtube;
         const aStorage = JSON.parse(localStorage.getItem('songsFavStorage'));
@@ -40,7 +50,7 @@ export class DetailSongPage implements OnInit {
         }
         this.sValue = this.route.snapshot.queryParams.id;
         if (aStorage == null) {
-            this.aResult = new Array();
+            this.aResult = [];
             this.bIsExistFav = this.checkIsFavExist(this.sValue);
         } else {
             this.aResult = aStorage;
@@ -48,7 +58,6 @@ export class DetailSongPage implements OnInit {
         }
         // this.bWebPlatForm = document.URL.startsWith('http') || document.URL.startsWith('https');
         this.bWebPlatForm = false;
-        console.log(this.bWebPlatForm);
     }
 
     ngOnInit() {
@@ -92,14 +101,12 @@ export class DetailSongPage implements OnInit {
     }
 
     getSongById(idSong: any) {
-        const aSongs = JSON.parse(localStorage.getItem('songsDataStorage'));
-        const aSongsDataStorageInline = JSON.parse(localStorage.getItem('songsDataStorageInline'));
-        if (aSongsDataStorageInline !== null && aSongsDataStorageInline !== '') {
-            return aSongsDataStorageInline.filter((song) => {
+        if (this.aSongsDataStorageInline !== null && this.aSongsDataStorageInline !== '') {
+            return this.aSongsDataStorageInline.filter((song) => {
                 return song.song_id === idSong;
             }) [0];
         } else {
-            return aSongs.filter((song) => {
+            return this.aSongs.filter((song) => {
                 return song.song_id === idSong;
             }) [0];
         }
@@ -107,7 +114,7 @@ export class DetailSongPage implements OnInit {
 
     addSongOnFav() {
         if (!this.checkIsFavExist(this.sValue)) {
-            const aNewFav = new Array();
+            const aNewFav = [];
             aNewFav.push({value: this.sValue});
             this.bIsExistFav = true;
             this.aSongsFavStorage = aNewFav.concat(this.aResult);
