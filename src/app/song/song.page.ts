@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 import {PopoverComponent} from '../components/popover/popover.component';
 import {PopoverController} from '@ionic/angular';
-import {ServicesSongsService} from '../services/services-songs.service';
+import {SongsService} from '../services/songs.service';
 
 
 @Component({
@@ -16,7 +16,7 @@ export class SongPage {
     aFilterSongs = [];
     aSongsDataStorageInline: any;
     constructor(public router: Router,
-                public servicesSong: ServicesSongsService,
+                public servicesSong: SongsService,
                 public popoverCtrl: PopoverController) {
         this.value = '';
     }

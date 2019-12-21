@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {Platform} from '@ionic/angular';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
-import {ServicesSongsService} from './services/services-songs.service';
+import {SongsService} from './services/songs.service';
 import {Network} from '@ionic-native/network/ngx';
 
 @Component({
@@ -18,7 +18,7 @@ export class AppComponent {
         private platform: Platform,
         private splashScreen: SplashScreen,
         private statusBar: StatusBar,
-        public servicesSong: ServicesSongsService,
+        public servicesSong: SongsService,
         public network: Network
     ) {
         this.aSongsDataStorageInline = localStorage.getItem('songsDataStorageInline');

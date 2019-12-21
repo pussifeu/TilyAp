@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: true
+  production: false,
+  assetsUrl : 'assets/data',
+  apiUrl : 'https://panel-admin.app-tliy.com/api'
 };
 
 /*

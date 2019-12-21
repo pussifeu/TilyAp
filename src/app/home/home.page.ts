@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {ServicesSongsService} from '../services/services-songs.service';
+import {SongsService} from '../services/songs.service';
 
 @Component({
     selector: 'app-home',
@@ -14,7 +14,7 @@ export class HomePage implements OnInit {
     aSongsFavStorage: any;
 
     constructor(public router: Router,
-                public servicesSong: ServicesSongsService) {
+                public servicesSong: SongsService) {
         this.aSongsDataStorageInline = localStorage.getItem('songsDataStorageInline');
         this.aSongsDataStorage = localStorage.getItem('songsDataStorage');
         this.aSongsFavStorage = localStorage.getItem('songsFavStorage');
