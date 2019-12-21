@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { DetailSongPage } from './detail-song/detail-song.page';
+import { AboutPage } from './about/about.page';
+import { FavoritesPage } from './favorites/favorites.page';
+import { HomePage } from './home/home.page';
 
 const routes: Routes = [
-  { path: '', loadChildren: './home/home.module#HomePageModule' },
-  { path: 'tabs-home', loadChildren: './tabs/tabs.module#TabsPageModule' },
-  { path: 'detail-song', loadChildren: './detail-song/detail-song.module#DetailSongPageModule' },
-  { path: 'search', loadChildren: './search/search.module#SearchPageModule' },
-  { path: 'apropos', loadChildren: './apropos/apropos.module#AproposPageModule' },
-  { path: 'favorites', loadChildren: './favorites/favorites.module#FavoritesPageModule' }
+  { path: '', component : HomePage},
+  { path: 'detail-song', component: DetailSongPage },
+  { path: 'about', component: AboutPage},
+  { path: 'favorites', component: FavoritesPage }
 ];
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

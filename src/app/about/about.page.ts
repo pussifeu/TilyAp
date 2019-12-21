@@ -2,11 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {NavController} from '@ionic/angular';
 
 @Component({
-    selector: 'app-apropos',
-    templateUrl: './apropos.page.html',
-    styleUrls: ['./apropos.page.scss'],
+    selector: 'app-about',
+    templateUrl: './about.page.html',
+    styleUrls: ['./about.page.scss'],
 })
-export class AproposPage implements OnInit {
+export class AboutPage implements OnInit {
 
     constructor(private navCtrl: NavController) {
     }
@@ -15,7 +15,7 @@ export class AproposPage implements OnInit {
     }
 
     loadPageSong() {
-        this.navCtrl.navigateBack('/tabs-home/tabs/song');
+        this.navCtrl.navigateBack('/tabs/song');
     }
 
 }

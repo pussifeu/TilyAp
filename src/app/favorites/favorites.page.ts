@@ -26,18 +26,17 @@ export class FavoritesPage implements OnInit {
     ionViewDidEnter() {
         this.aSongs = JSON.parse(localStorage.getItem('songsDataStorage'));
         this.aStorage = JSON.parse(localStorage.getItem('songsFavStorage'));
-        if (this.aStorage == null) {
+        if (!this.aStorage) {
             this.aStorage = [];
         }
-        if (this.aSongs == null) {
+        if (!this.aSongs) {
             this.aSongs = [];
         }
         this.aSongsStorage = [];
         this.getSongsFavorites();
     }
 
-    ngOnInit() {
-    }
+    ngOnInit() {}
 
     async presentPopover(even: any) {
         const popover = await this.popoverCtrl.create({
@@ -59,7 +58,7 @@ export class FavoritesPage implements OnInit {
     }
 
     getPage(sPage: string) {
-        this.navCtrl.navigateBack('/tabs-home/tabs/' + sPage);
+        this.navCtrl.navigateBack('/tabs/' + sPage);
     }
 
     loadPageDetailSong(idSong: any) {

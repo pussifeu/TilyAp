@@ -1,50 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import { SongPage } from '../song/song.page';
+import { SearchPage } from '../search/search.page';
 
 const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage,
     children: [
-      {
-        path: 'song',
-        children: [
-          {
-            path: '',
-            loadChildren: '../song/song.module#SongPageModule'
-          }
-        ]
-      },
-      {
-        path: 'game',
-        children: [
-          {
-            path: '',
-            loadChildren: '../game/game.module#GamePageModule'
-          }
-        ]
-      },
-      {
-        path: 'search',
-        children: [
-          {
-            path: '',
-            loadChildren: '../search/search.module#SearchPageModule'
-          }
-        ]
-      },
-      {
-        path: 'tabs-home',
-        redirectTo: '/tabs/song',
-        pathMatch: 'full'
-      }
+      {path: 'song',component: SongPage},
+      {path: 'search', component: SearchPage}
     ]
-  },
-  {
-    path: 'tabs-home',
-    redirectTo: '/tabs/song',
-    pathMatch: 'full'
   }
 ];
 
@@ -54,4 +21,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }

@@ -30,7 +30,6 @@ export class DetailSongPage implements OnInit {
                 private navCtrl: NavController,
                 public popoverController: PopoverController,
                 public toastController: ToastController,
-                private platform: Platform,
                 private domSanitizer: DomSanitizer) {
 
         this.aSongs = JSON.parse(localStorage.getItem('songsDataStorage'));
@@ -56,8 +55,8 @@ export class DetailSongPage implements OnInit {
             this.aResult = aStorage;
             this.bIsExistFav = this.checkIsFavExist(this.sValue);
         }
-        // this.bWebPlatForm = document.URL.startsWith('http') || document.URL.startsWith('https');
-        this.bWebPlatForm = false;
+        this.bWebPlatForm = document.URL.startsWith('http') || document.URL.startsWith('https');
+        //this.bWebPlatForm = false;
     }
 
     ngOnInit() {
@@ -155,16 +154,16 @@ export class DetailSongPage implements OnInit {
     }
 
     getPage(sPage: string) {
-        this.navCtrl.navigateBack('/tabs-home/tabs/' + sPage);
+        this.navCtrl.navigateBack('/tabs/' + sPage);
     }
 
     loadPageSong() {
         if (this.sPageFather === 'song') {
-            this.navCtrl.navigateBack('/tabs-home/tabs/song');
+            this.navCtrl.navigateBack('/tabs/song');
         } else if (this.sPageFather === 'favorites') {
             this.navCtrl.navigateBack('/favorites');
         } else {
-            this.navCtrl.navigateBack('/tabs-home/tabs/search');
+            this.navCtrl.navigateBack('/tabs/search');
         }
     }
 }

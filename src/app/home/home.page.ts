@@ -24,26 +24,17 @@ export class HomePage implements OnInit {
     }
 
     ionViewDidEnter() {
-        let time = 3500;
-        const t0 = performance.now();
-        this.getAllSongs();
-        const t1 = performance.now();
-        if (t1 - t0 > time) {
-            time = t1 - t0;
-        }
-        setTimeout(() => {
-            this.router.navigate(['tabs-home/tabs/song']);
-        }, time);
+        this.router.navigate(['tabs/song']);
     }
 
     getAllSongs() {
         if (!navigator.onLine) {
-            if (this.aSongsDataStorage === null || this.aSongsDataStorage === '') {
+            if (!this.aSongsDataStorage) {
                 this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
                     localStorage.setItem('songsDataStorage', JSON.stringify(res));
                 });
             }
-            if (this.aSongsDataStorageInline === null || this.aSongsDataStorageInline === '') {
+            if (!this.aSongsDataStorageInline) {
                 this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
                     localStorage.setItem('songsDataStorageInline', JSON.stringify(res));
                 });
@@ -55,12 +46,12 @@ export class HomePage implements OnInit {
                     localStorage.setItem('songsDataStorage', JSON.stringify(res));
                 },
                 (err) => {
-                    if (this.aSongsDataStorage === null || this.aSongsDataStorage === '') {
+                    if (!this.aSongsDataStorage) {
                         this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
                             localStorage.setItem('songsDataStorage', JSON.stringify(res));
                         });
                     }
-                    if (this.aSongsDataStorageInline === null || this.aSongsDataStorageInline === '') {
+                    if (!this.aSongsDataStorageInline) {
                         this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
                             localStorage.setItem('songsDataStorageInline', JSON.stringify(res));
                         });
@@ -68,7 +59,7 @@ export class HomePage implements OnInit {
                 }
             );
         }
-        if (this.aSongsFavStorage === null || this.aSongsFavStorage === '') {
+        if (!this.aSongsFavStorage) {
             localStorage.setItem('songsFavStorage', JSON.stringify([]));
         }
     }

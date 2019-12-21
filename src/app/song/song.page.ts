@@ -6,7 +6,7 @@ import {ServicesSongsService} from '../services/services-songs.service';
 
 
 @Component({
-    selector: 'app-tab1',
+    selector: 'app-song',
     templateUrl: 'song.page.html',
     styleUrls: ['song.page.scss']
 })

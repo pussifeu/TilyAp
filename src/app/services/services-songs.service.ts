@@ -8,7 +8,6 @@ export class ServicesSongsService {
 
     constructor(private httpClient: HttpClient) {
     }
-
     aGetRemoteJsonData() {
         return this.httpClient.get('assets/data/song_data.json');
     }

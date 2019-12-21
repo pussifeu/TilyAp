@@ -31,7 +31,7 @@ export class SearchPage implements OnInit {
 
     saveValue(event: any) {
         this.value = event;
-        const idSong = parseInt(this.value);
+        const idSong = parseInt(this.value, 10);
         const navigationExtras = {
             queryParams: {
                 id: idSong,
