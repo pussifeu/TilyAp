@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { Network } from '@ionic-native/network/ngx';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { TilyModule } from './tily.module';
+import { TilyModule } from './tily/tily.module';
 
 @NgModule({
     declarations: [AppComponent],

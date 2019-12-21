@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DetailSongPage } from './detail-song/detail-song.page';
+import { DetailSongPage } from './tily/detail-song/detail-song.page';
 import { AboutPage } from './about/about.page';
 import { FavoritesPage } from './favorites/favorites.page';
 import { HomePage } from './home/home.page';

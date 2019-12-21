@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {AlertController, PopoverController} from '@ionic/angular';
-import {PopoverComponent} from '../components/popover/popover.component';
+import {PopoverComponent} from '../../components/popover/popover.component';
 
 @Component({
     selector: 'app-search',
@@ -9,25 +9,18 @@ import {PopoverComponent} from '../components/popover/popover.component';
     styleUrls: ['./search.page.scss'],
 })
 export class SearchPage implements OnInit {
-
-    value: any;
-
+    value: any = '';
     constructor(public router: Router,
                 public alertController: AlertController,
                 public popoverCtrl: PopoverController) {
-        this.value = '';
     }
 
     ngOnInit() {
     }
 
-    ionViewDidEnter() {
-        this.value = '';
-    }
+    ionViewDidEnter() {}
 
-    changeValue(event: any) {
-
-    }
+    changeValue(event: any) {}
 
     saveValue(event: any) {
         this.value = event;

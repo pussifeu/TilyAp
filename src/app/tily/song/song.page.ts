@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
-import {PopoverComponent} from '../components/popover/popover.component';
+import {PopoverComponent} from '../../components/popover/popover.component';
 import {PopoverController} from '@ionic/angular';
-import {SongsService} from '../services/songs.service';
+import {SongsService} from '../../services/songs.service';
 
 
 @Component({

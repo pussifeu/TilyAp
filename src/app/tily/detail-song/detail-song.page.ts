@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {NavController, PopoverController, ToastController} from '@ionic/angular';
 import {ActivatedRoute, Router} from '@angular/router';
-import {PopoverComponent} from '../components/popover/popover.component';
+import {PopoverComponent} from '../../components/popover/popover.component';
 import {DomSanitizer} from '@angular/platform-browser';
-import {PopoverShareComponent} from '../components/popover-share/popover-share.component';
+import {PopoverShareComponent} from '../../components/popover-share/popover-share.component';
 import {Platform} from '@ionic/angular';
 
 
