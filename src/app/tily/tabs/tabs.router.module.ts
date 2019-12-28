@@ -11,7 +11,7 @@ const routes: Routes = [
     children: [
       {
         path: 'song',
-        component: SongPage
+        component: SongPage,
       },
       { path: 'search', component: SearchPage }
     ]

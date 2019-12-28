@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
 
     backButtonEvent() {
         this.platform.backButton.subscribe(async () => {
-            if (this.router.url == "/tabs/song") {
+            if (this.router.url == "/tabs/song" || this.router.url == "/tabs/search") {
                 navigator['app'].exitApp();
             }
         })

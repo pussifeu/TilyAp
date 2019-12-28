@@ -54,9 +54,8 @@ export class DetailSongPage implements OnInit {
             this.aResult = aStorage;
             this.bIsExistFav = this.checkIsFavExist(this.sValue);
         }
-        this.bWebPlatForm = document.URL.startsWith('http') || document.URL.startsWith('https');
-        //this.bWebPlatForm = false;
-
+        //this.bWebPlatForm = document.URL.startsWith('http') || document.URL.startsWith('https');
+        this.bWebPlatForm = false;
     }
 
     nl2br(text: string) {
