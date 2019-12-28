@@ -3,9 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment'
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class SongsService {
     private ASSETS_URL: string = environment.assetsUrl;
     private URL_API: string = environment.apiUrl;

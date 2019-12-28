@@ -7,6 +7,8 @@ import { TabsPage } from './tabs.page';
 import { ComponentsModule } from '../../components/components.module';
 import { SearchPage } from '../search/search.page';
 import { SongPage } from '../song/song.page';
+import { SongsService } from 'src/app/services/songs.service';
+import { SongsResolverService } from 'src/app/services/resolvers/songs-resolver.service';
 
 @NgModule({
   imports: [
@@ -16,6 +18,10 @@ import { SongPage } from '../song/song.page';
     ComponentsModule,
     TabsPageRoutingModule
   ],
-  declarations: [TabsPage, SongPage, SearchPage]
+  declarations: [TabsPage, SongPage, SearchPage],
+  providers: [
+    SongsService,
+    SongsResolverService,
+  ]
 })
 export class TabsPageModule {}

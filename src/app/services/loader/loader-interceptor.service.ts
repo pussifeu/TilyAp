@@ -6,34 +6,28 @@ import { LoaderService } from './loader.service';
 
 const APP_XHR_TIMEOUT = 30000;
 @Injectable()
-export class LoaderInterceptorService implements HttpInterceptor{
-
+export class LoaderInterceptorService implements HttpInterceptor {
   constructor(private loaderService: LoaderService) { }
-
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    this.showLoader();
     return next.handle(req).pipe(
       timeout(APP_XHR_TIMEOUT),
-      tap((event: HttpEvent<any>) => { 
-        if (event instanceof HttpResponse) {this.onEnd();}
-      },(err: any) => {this.onEnd();}),
-    catchError((err) => this.handleErrorResponse(err)),);
-
+      tap(
+        async (event: HttpEvent<any>) => {
+          await this.loaderService.show();
+          if (event instanceof HttpResponse) {
+            this.loaderService.hide();
+          }
+        },
+        async (err: any) => {
+          await this.loaderService.show();
+          this.loaderService.hide();
+          return this.handleErrorResponse(err)
+        }
+      ),
+      catchError((err) => this.handleErrorResponse(err)));
   }
 
-  private onEnd(): void {
-    this.hideLoader();
-  }
-
-  private showLoader(): void {
-    this.loaderService.show();
-  }
-
-  private hideLoader(): void {
-    this.loaderService.hide();
-  }
-
-  private handleErrorResponse(errorResponse): Observable<HttpEvent<any>> {
+  private handleErrorResponse(errorResponse): Observable<any> {
     let customError: any = {};
     if (errorResponse instanceof TimeoutError || errorResponse instanceof HttpErrorResponse) {
       customError.message = 'Service unavailable, please try again later';
@@ -48,8 +42,6 @@ export class LoaderInterceptorService implements HttpInterceptor{
         break;
       default: customError.message = 'An error has occured';
     }
-
     return throwError(customError);
   }
-
 }

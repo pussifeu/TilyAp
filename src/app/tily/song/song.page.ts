@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 import {PopoverComponent} from '../../components/popover/popover.component';
 import {PopoverController} from '@ionic/angular';
-import {SongsService} from '../../services/songs.service';
 
 
 @Component({
@@ -13,17 +12,23 @@ import {SongsService} from '../../services/songs.service';
 export class SongPage {
     value: any;
     aSongs: any;
-    aFilterSongs = [];
-    aSongsDataStorageInline: any;
+    aFilterSongs: any = [];
+    aSongsDataStorageInline: any = []
+    aSongsDataStorage: any= [];
     constructor(public router: Router,
-                public servicesSong: SongsService,
                 public popoverCtrl: PopoverController) {
         this.value = '';
     }
 
     ionViewDidEnter() {
-        this.aSongsDataStorageInline = localStorage.getItem('songsDataStorageInline');
-        this.getAllSongs();
+        this.aSongsDataStorageInline = JSON.parse(localStorage.getItem('songsDataStorageInline'));
+        this.aSongsDataStorage = JSON.parse(localStorage.getItem('songsDataStorage'));
+        if(this.aSongsDataStorageInline) {
+            this.aSongs = this.aSongsDataStorageInline;
+        }
+        else {
+            this.aSongs = this.aSongsDataStorage;
+        }
         this.aFilterSongs = this.aSongs;
     }
 
@@ -37,25 +42,15 @@ export class SongPage {
     }
 
     loadPageDetailSong(idSong: any) {
-        const navigationExtras = {
+        this.router.navigate(['detail-song'], {
             queryParams: {
                 id: idSong,
                 pageFather: 'song'
             }
-        };
-        this.router.navigate(['detail-song'], navigationExtras);
-    }
-
-    getAllSongs() {
-        if (this.aSongsDataStorageInline !== null && this.aSongsDataStorageInline !== '') {
-            this.aSongs = JSON.parse(localStorage.getItem('songsDataStorageInline'));
-        } else {
-            this.aSongs = JSON.parse(localStorage.getItem('songsDataStorage'));
-        }
+        });
     }
 
     getSongByTittle(event: any) {
-        this.getAllSongs();
         this.searchValueInSong(event);
     }
 

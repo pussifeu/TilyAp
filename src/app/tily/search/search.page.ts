@@ -25,14 +25,13 @@ export class SearchPage implements OnInit {
     saveValue(event: any) {
         this.value = event;
         const idSong = parseInt(this.value, 10);
-        const navigationExtras = {
-            queryParams: {
-                id: idSong,
-                pageFather: 'search'
-            }
-        };
         if (this.getSongById(idSong) !== undefined) {
-            this.router.navigate(['detail-song'], navigationExtras);
+            this.router.navigate(['detail-song'],  {
+                queryParams: {
+                    id: idSong,
+                    pageFather: 'search'
+                }
+            });
         } else {
             this.openAlert();
         }

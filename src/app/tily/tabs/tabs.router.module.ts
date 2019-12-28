@@ -9,8 +9,11 @@ const routes: Routes = [
     path: 'tabs',
     component: TabsPage,
     children: [
-      {path: 'song',component: SongPage},
-      {path: 'search', component: SearchPage}
+      {
+        path: 'song',
+        component: SongPage
+      },
+      { path: 'search', component: SearchPage }
     ]
   }
 ];

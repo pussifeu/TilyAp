@@ -1,18 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { LoadingController } from '@ionic/angular';
 
 @Injectable()
 export class LoaderService {
+  isLoading = false;
+  loading: HTMLIonLoadingElement;
+  load: boolean = false;
+  constructor(public loadingController: LoadingController) { }
 
-  private loaderSubject = new Subject();
-  loaderState = this.loaderSubject.asObservable();
-
-  show() {
-    this.loaderSubject.next(<any>{show: true});
+  async show(): Promise<boolean> {
+    this.loading = await this.loadingController.create({
+      cssClass: 'custom-loader-class',
+      spinner: 'crescent',
+      duration: 1000
+    });
+    this.loading.present();
+    this.load = true;
+    return this.load;
   }
   
-  hide() {
-      this.loaderSubject.next(<any>{show: false});
+  async hide(): Promise<void> {
+    if (this.loading) {
+      this.loading.dismiss();
+    }
   }
-
 }

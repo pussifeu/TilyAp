@@ -1,6 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
-import {SongsService} from '../services/songs.service';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-home',
@@ -9,58 +8,11 @@ import {SongsService} from '../services/songs.service';
 })
 export class HomePage implements OnInit {
 
-    aSongsDataStorage: any;
-    aSongsDataStorageInline: any;
-    aSongsFavStorage: any;
-
-    constructor(public router: Router,
-                public servicesSong: SongsService) {
-        this.aSongsDataStorageInline = localStorage.getItem('songsDataStorageInline');
-        this.aSongsDataStorage = localStorage.getItem('songsDataStorage');
-        this.aSongsFavStorage = localStorage.getItem('songsFavStorage');
+    constructor(public router: Router) {
     }
-
-    ngOnInit() {
-    }
-
-    ionViewDidEnter() {
-        this.router.navigate(['tabs/song']);
-    }
-
-    getAllSongs() {
-        if (!navigator.onLine) {
-            if (!this.aSongsDataStorage) {
-                this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
-                    localStorage.setItem('songsDataStorage', JSON.stringify(res));
-                });
-            }
-            if (!this.aSongsDataStorageInline) {
-                this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
-                    localStorage.setItem('songsDataStorageInline', JSON.stringify(res));
-                });
-            }
-        } else {
-            this.servicesSong.aGetRemoteOnlineJsonData().subscribe(
-                (res) => {
-                    localStorage.setItem('songsDataStorageInline', JSON.stringify(res));
-                    localStorage.setItem('songsDataStorage', JSON.stringify(res));
-                },
-                (err) => {
-                    if (!this.aSongsDataStorage) {
-                        this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
-                            localStorage.setItem('songsDataStorage', JSON.stringify(res));
-                        });
-                    }
-                    if (!this.aSongsDataStorageInline) {
-                        this.servicesSong.aGetRemoteJsonData().subscribe((res: any[]) => {
-                            localStorage.setItem('songsDataStorageInline', JSON.stringify(res));
-                        });
-                    }
-                }
-            );
-        }
-        if (!this.aSongsFavStorage) {
-            localStorage.setItem('songsFavStorage', JSON.stringify([]));
-        }
+    ngOnInit(): void {
+        setTimeout(() => {
+            this.router.navigate(['/tabs/song']);
+        }, 1000 )
     }
 }

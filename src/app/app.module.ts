@@ -17,9 +17,9 @@ import { TilyModule } from './tily/tily.module';
     entryComponents: [],
     imports: [
         BrowserModule,
-        IonicModule.forRoot(), 
-        AppRoutingModule, 
-        HttpClientModule, 
+        IonicModule.forRoot(),
+        AppRoutingModule,
+        HttpClientModule,
         TilyModule
     ],
     providers: [
@@ -28,7 +28,7 @@ import { TilyModule } from './tily/tily.module';
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
         SocialSharing,
         Network,
-        { provide: LocationStrategy, useClass: HashLocationStrategy }
+        { provide: LocationStrategy, useClass: HashLocationStrategy },
     ],
     bootstrap: [AppComponent]
 })
